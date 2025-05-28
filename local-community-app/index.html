@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Community Event Portal</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <!-- Navigation -->
+  <header>
+    <div class="nav-container">
+        <h1 style="color: white;">Community Portal</h1>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#events">Events</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="help.html" target="_blank">Help</a></li>
+        </ul>
+    </div>
+</header>
+
+
+  <!-- Welcome Banner -->
+  <div id="welcomeBanner" class="box-section">
+    Welcome to the Community Portal!
+    <span style="color: red; font-weight: bold;">Special Offer Today!</span>
+  </div>
+
+  <!-- Main -->
+  <main>
+    <!-- Home Section -->
+    <section id="home" class="box-section">
+      <h1 class="highlight">Upcoming Events</h1>
+      <div id="eventList"></div>
+    </section>
+
+    <!-- Events Gallery -->
+    <section id="events" class="box-section">
+      <h2>Past Community Events</h2>
+      <table>
+        <caption>Event Memories</caption>
+        <tr>
+          <td><img src="img1.jpg" alt="Event 1" title="Tree Plantation" class="gallery-img" /></td>
+          <td><img src="img2.jpg" alt="Event 2" title="Music Night" class="gallery-img" /></td>
+          <td><img src="img3.jpg" alt="Event 3" title="Food Fest" class="gallery-img" /></td>
+        </tr>
+        <tr>
+          <td><img src="img4.jpg" alt="Event 4" title="Dance Show" class="gallery-img" /></td>
+          <td><img src="img5.jpg" alt="Event 5" title="Art Show" class="gallery-img" /></td>
+          <td><img src="img6.jpg" alt="Event 6" title="Volunteer Day" class="gallery-img" /></td>
+        </tr>
+      </table>
+    </section>
+
+    <!-- Registration Form -->
+    <section id="register" class="box-section">
+      <h2>Register for an Event</h2>
+      <form id="registrationForm">
+        <input type="text" name="name" placeholder="Your Name" required autofocus />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <input type="date" name="date" required />
+        <select name="eventType" id="eventType">
+          <option value="">Select Event Type</option>
+          <option value="music">Music</option>
+          <option value="workshop">Workshop</option>
+          <option value="food">Food</option>
+        </select>
+        <textarea name="message" placeholder="Your message..."></textarea>
+        <output id="confirmationMessage"></output><br />
+        <button type="submit">Submit</button>
+      </form>
+    </section>
+
+    <!-- Feedback -->
+    <section id="feedback" class="box-section">
+      <h2>Feedback</h2>
+      <input type="tel" id="phone" placeholder="Phone Number" onblur="validatePhone()" />
+      <textarea id="feedbackText" onkeydown="countCharacters()" placeholder="Your feedback..."></textarea>
+      <p>Characters typed: <span id="charCount">0</span></p>
+    </section>
+
+    <!-- Video Invite -->
+    <section id="video" class="box-section">
+      <h2>Event Promo</h2>
+      <video id="promoVideo" controls oncanplay="videoReadyMessage()">
+        <source src="momo.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      <p id="videoMessage"></p>
+    </section>
+
+    <!-- Geolocation -->
+    <section id="map" class="box-section">
+      <h2>Find Nearby Events</h2>
+      <button onclick="findNearbyEvents()">Find Nearby Events</button>
+      <p id="locationDisplay"></p>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="box-section">
+    <p>&copy; 2025 Local Community Council</p>
+  </footer>
+</body>
+</html>

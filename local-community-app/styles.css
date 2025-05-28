@@ -1,0 +1,213 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Typography */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f4f7f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+h1, h2 {
+    color: #2a4d69;
+    margin-bottom: 0.5em;
+}
+
+/* Navigation Bar */
+header {
+    background-color: #111;
+    color: white;
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1000px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+    color: #00aced;
+}
+
+/* Welcome Banner */
+.banner {
+    background: linear-gradient(to right, #d4f1f4, #bee9e8);
+    text-align: center;
+    padding: 1rem;
+    font-size: 1.2rem;
+}
+
+.highlight-red {
+    color: red;
+    font-weight: bold;
+}
+
+/* Section Styling */
+.section {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 0 20px;
+}
+
+/* Event List */
+.event-list div {
+    background-color: white;
+    padding: 1rem;
+    border-left: 5px solid #00aced;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+}
+
+/* Gallery */
+.event-gallery {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 1rem;
+}
+
+.gallery-img {
+    width: 100%;
+    max-width: 200px;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.gallery-img:hover {
+    transform: scale(1.05);
+}
+
+/* Forms */
+form input,
+form select,
+form textarea {
+    display: block;
+    width: 100%;
+    margin-bottom: 1rem;
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+form button {
+    background-color: #2a4d69;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+form button:hover {
+    background-color: #4b86b4;
+}
+
+/* Feedback Counter */
+#charCount {
+    font-weight: bold;
+    color: #2a4d69;
+}
+
+/* Footer */
+footer {
+    background-color: #111;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .gallery-img {
+        max-width: 100%;
+    }
+
+    .nav-container {
+        flex-direction: column;
+    }
+}
+
+/* Container Boxes for Sections */
+.box-section {
+    background-color: white;
+    margin: 2rem auto;
+    padding: 1.5rem;
+    max-width: 1000px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-left: 5px solid #4b86b4;
+}
+
+/* Optional heading styling */
+.box-section h2 {
+    color: #2a4d69;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+/* Gallery Grid Styling */
+.gallery-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+}
+
+.gallery-grid img {
+    width: 200px;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.gallery-grid img:hover {
+    transform: scale(1.05);
+}
+
+/* Form button improvement */
+form button {
+    background-color: #2a4d69;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #386fa4;
+}
